@@ -11,8 +11,15 @@ export default {
 		{
 			title: 'Products',
 			name: 'products',
-			type: 'reference',
-			to: {type: 'products'},
-		},
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: { 
+						type: 'product' 
+					}
+				}
+			]
+		}, 
 	]
 }
