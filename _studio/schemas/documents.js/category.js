@@ -9,20 +9,10 @@ export default {
 			type: 'string'
 		},
 		{
-			title: 'Image',
-			name: 'image',
-			type: 'image',
-		},
-		{
-			title: 'Descreption',
-			name: 'descreption',
-			type: 'text'
-		},
-		{
 			title: 'Brand',
 			name: 'brand',
 			type: 'reference',
-			to: {type: 'brand'},
+			to: {type: 'product'},
 		},
 	]
 }
