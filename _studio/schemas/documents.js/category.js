@@ -9,10 +9,10 @@ export default {
 			type: 'string'
 		},
 		{
-			title: 'Brand',
-			name: 'brand',
+			title: 'Products',
+			name: 'products',
 			type: 'reference',
-			to: {type: 'product'},
+			to: {type: 'products'},
 		},
 	]
 }
