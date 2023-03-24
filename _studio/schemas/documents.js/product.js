@@ -37,6 +37,12 @@ export default {
 			type: 'number',
 		},
 		{
+			title: 'Category',
+			name: 'Category',
+			type: 'reference',
+			to: {type: 'category'}
+		},
+		{
 			title: 'IsExlusive',
 			name: 'isExlusive',
 			type: 'boolean'
