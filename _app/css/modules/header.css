@@ -1,8 +1,22 @@
 .header {
+	background: var(--secondary-color);
+	padding: 1rem 1.5rem;
 }
 
-.header__navigation {
+.header__dropdown{
+	display: flex;
+	justify-content: ;
+ 	gap: 2rem;
 }
 
-.header__navigation--visible {
+.header__category {
+ 	font-size: 1.5rem;
+	width: 500;
+	border-radius: 1rem;
+}
+
+.header__brand {
+	font-size: 1.5rem;
+	width: 500;
+ 	border-radius: 1rem;
 }
