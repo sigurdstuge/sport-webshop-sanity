@@ -1,8 +1,37 @@
 .header {
+	background: var(--secondary-color);
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
 }
 
-.header__navigation {
+.header__dropdown{
+	display: flex;
+ 	gap: 2rem;
 }
 
-.header__navigation--visible {
+.header__category {
+ 	font-size: 1.5rem;
+	width: 500;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.header__brand {
+	font-size: 1.5rem;
+	width: 500;
+ 	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.header__logo {
+	width: 3rem;
+	height: 3rem;
+}
+
+.logo__logo img {
+	width: 100%;
+	height: auto;
 }
