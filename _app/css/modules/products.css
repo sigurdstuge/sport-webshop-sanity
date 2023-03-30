@@ -1,6 +1,41 @@
-.products-layout {
+.products {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	margin: 2rem;
+}
+
+.products__product {
+	padding: 1rem;
+}
+
+.products__card {
+	display: flex;
+	background: var(--secondary-color);
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+.products__image {
+	width: 100%
+}
+
+.products__image img {
+	width: 100%;
+	height: auto;
+}
+
+.products__name {
+	font-size: 2rem;
+	width: 600;
+}
+
+.products__price {
+	font-size: 1.5rem;
+	width: 500;
 }
 
 @media (max-width: 1250px) {
