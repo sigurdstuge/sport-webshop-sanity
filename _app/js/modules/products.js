@@ -22,12 +22,16 @@ export default async function products() {
 	}
 
 	function returnUpdateQuery() {
-		return `*[_type == 'product' ${params.brandName !== '' ? '&& brand->.name == $brandName' : ''}] {
+		const brandQuery = '&& brand->.name == $brandName'
+
+		const query = `*[_type == 'product' ${params.brandName !== '' ? brandQuery : ''}] {
 			name,	
 			price,
 			'imageUrl': image.asset->.url,
 			'brandName': brand->.name,
 		}`
+		
+		return query;
 	}
 
 	async function handleDropdownBrandInput() {
