@@ -2,7 +2,8 @@ import {sanity} from '../sanity.js'
 
 export default async function products() {
 	const params = {
-		brandName: ''
+		brandName: '',
+		categoryName: '',
 	}
 
 	let query = returnUpdateQuery();
@@ -16,15 +17,21 @@ export default async function products() {
 	dropdownCategory.addEventListener('input', handleCategoryDropdownInput);
 	dropdownBrand.addEventListener('input', handleDropdownBrandInput);
 
-	function handleCategoryDropdownInput() {
+	async function handleCategoryDropdownInput() {
 		const input = dropdownCategory.value;
-		console.log(input)
+		params.categoryName = input;
+		query = returnUpdateQuery();
+		products = await sanity.fetch(query, params);
+		renderHTML();
+
+			
 	}
 
 	function returnUpdateQuery() {
-		const brandQuery = '&& brand->.name == $brandName'
+		const brandQuery = `${params.brandName !== '' ? '&& brand->.name == $brandName' : ''}`
+		const categoryQuery = `${params.categoryName !== '' ? '&& Category->.name == $categoryName' : ''}`
 
-		const query = `*[_type == 'product' ${params.brandName !== '' ? brandQuery : ''}] {
+		const query = `*[_type == 'product' ${brandQuery} ${categoryQuery}] {
 			name,	
 			price,
 			'imageUrl': image.asset->.url,
@@ -33,6 +40,7 @@ export default async function products() {
 		
 		return query;
 	}
+	
 
 	async function handleDropdownBrandInput() {
 		const input = dropdownBrand.value;
