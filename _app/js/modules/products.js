@@ -9,6 +9,7 @@ export default async function products() {
 	let query = returnUpdateQuery();
 
 	let products = await sanity.fetch(query, params);
+	console.log(products)
 
 	const dropdownCategory = document.querySelector('.header__category');
 	const dropdownBrand = document.querySelector('.header__brand');
@@ -67,7 +68,7 @@ export default async function products() {
 
 			// innertext
 			name.innerText = product.name;
-			brand.innerText = product.brand;
+			brand.innerText = product.brandName;
 			price.innerText = product.price;
 			
 			// src
