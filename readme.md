@@ -1,12 +1,13 @@
-# sports webshop
-This project I had create a sports webshop with training cloths . This is linked up to a sanity project. The products is presented by a card with productname, brandname and price. The webside is responsive
+# Sports webshop
+This project I had create a sports webshop with training cloths . This is linked up to a sanity project. The products is presented by a card with productname, brandname and price. The website is responsive.
 
-https://sport-webshop.netlify.app
+## MVP
+The code is understandable and being able to fetch events and present it in html.
 
-## mvp
-the code is understandable and beeing able to fetch events and present it in html.
+## Roadmap
+- Add to basket
+- More products
+- Search field
 
-## roadmap
-- add to basket
-- more products
-- search felt
+## demo
+Live view [Here](https://sport-webshop.netlify.app).
